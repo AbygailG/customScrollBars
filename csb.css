@@ -1,0 +1,54 @@
+.csb-area {
+	overflow: hidden !important;
+}
+
+.csb-contents {
+	height: 100%;
+	overflow-y: scroll;
+	position: relative;
+}
+
+.csb-wrap {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.csb-wrap.unselectable {
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+.csb-track {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 8px;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.csb-drag {
+	opacity: 0;
+	position: absolute;
+	left: 0;
+	right: 0;
+	cursor: pointer;
+	border-radius: 4px;
+	background: #EEEEEE;
+	border: 1px solid rgb(80,80,80);
+	border-color: rgba(80,80,80,0.3);
+	transition: opacity 0.3s ease-in;
+	-webkit-transition: opacity 0.3s ease-in;
+}
+
+.csb-drag.visible {
+	opacity: 1;
+}
