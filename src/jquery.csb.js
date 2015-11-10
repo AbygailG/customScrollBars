@@ -195,8 +195,9 @@ if(jQuery) {
 			 */
 			var replaceScrollbar = function() {
 				if(!csb.$node.length) throw('Undefined node, can\'t instantiate the scrollbar!');
-				if(csb.$node.hasClass('csb-area')) cleanNode();
-				if(csb.$node.hasClass('csb-contents')) return;
+				if(!scrollbarWidth) return;
+				if(csb.$node.hasClass('csb-area')) csb.cleanNode();
+				if(csb.$node.hasClass('csb-wrap')) return;
 
 				csb.$node.addClass('csb-area');
 				if(csb.$node.css('position') == 'static') csb.$node.css('position','relative');
@@ -214,7 +215,7 @@ if(jQuery) {
 
 				addCustomScrollbar();
 
-				if(visibleTrackHeight < 3) { return cleanNode(); }
+				if(visibleTrackHeight < 3) { return csb.cleanNode(); }
 
 				updatePosition();
 				setEventHandlers();

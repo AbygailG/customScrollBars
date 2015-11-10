@@ -1,13 +1,9 @@
+/* Converted node */
 .csb-area {
 	overflow: hidden !important;
 }
 
-.csb-contents {
-	height: 100%;
-	overflow-y: scroll;
-	position: relative;
-}
-
+/* Inner wrap */
 .csb-wrap {
 	position: absolute;
 	left: 0;
@@ -25,6 +21,7 @@
 	-ms-user-select: none;
 }
 
+/* Scrollbar track */
 .csb-track {
 	position: absolute;
 	top: 0;
@@ -35,6 +32,7 @@
 	overflow: hidden;
 }
 
+/* Scrollbar handle */
 .csb-drag {
 	opacity: 0;
 	position: absolute;
